@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    // Spring Web
+    // Spring Web - using spring boot starter
     compile 'org.springframework.boot:spring-boot-starter-web'
     
     // Spring Data including Hibernate, Repository, and other classes

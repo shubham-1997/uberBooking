@@ -1,0 +1,53 @@
+# Spring Defaults
+spring:
+  main:
+     allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  datasource:
+    jdbcUrl: #put url over here for jdbc connection
+  jackson:
+       default-property-inclusion: non_null
+  jpa:
+    database: default
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQLDialect #Assuming we'll use postgres as db
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        temp:
+          use_jdbc_metadata_defaults: false
+  #Enabling h2
+  h2: 
+    console:
+      enabled: true
+      path: /h2-console
+      
+#Dataource connection sample - change values if needed
+datasource:
+  snowflake:
+    driver-class-name: 
+    jdbcUrl: 
+    username: 
+    password:
+    testOnBorrow: false
+    testWhileIdle: false
+    testOnReturn: false
+
+# Deployment Details
+server: 
+  port: 8090
+
+# Actuator - Spring Endpoints    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, httptrace, metrics, mappings, sesssions
