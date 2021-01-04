@@ -19,6 +19,7 @@ import org.hibernate.annotations.Type;
 import org.springframework.data.geo.Point;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.project.uberBooking.models.RideStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -62,6 +63,9 @@ public class Ride {
 	@Column(name = "RDS_FARE")
 	private String fare;
 
+	@Column(name = "RDS_FARE")
+	private RideStatus rideStatus;
+	
 	@Column(name = "RDS_START_LAT_LONG")
 	@Type(type = "org.hibernate.spatial.GeometryType")
 	private Point startLatitudeLongitude;
