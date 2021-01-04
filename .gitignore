@@ -1,5 +1,20 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+/.gradle/
+/.build/**
+/.idea/**
+/bin/**
+/out/**
+*.classpath
+build/
 
-# Ignore Gradle build output directory
-build
+
+bin/.gitignore
+testOutput/.gitignore
+.project
+.settings/org.eclipse.buildship.core.prefs
+
+# VSCode
+
+.vscode
+#Eclipse
+bin/
+.settings/
