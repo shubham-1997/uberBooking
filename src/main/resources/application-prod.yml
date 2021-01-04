@@ -1,7 +1,5 @@
-/*
- * This file if for production configuration
- *
- */
+# This file if for production configuration
+
 
 # Spring Defaults
 spring:

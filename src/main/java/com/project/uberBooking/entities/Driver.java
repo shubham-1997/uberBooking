@@ -26,7 +26,7 @@ public class Driver {
 	private String email;
 
 	@Column(name = "DRVR_PASSWORD")
-	private String password;	
+	private String password;
 
 	public Driver() {
 	}

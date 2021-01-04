@@ -31,12 +31,12 @@ public class Ride {
 	@Column(name = "RDS_ID")
 	private @Id @GeneratedValue Long id;
 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "RDS_RIDER_ID", nullable = false)
 	private User riderId;
 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "RDS_DRIVER_ID", nullable = false)
 	private Driver driverId;
@@ -46,7 +46,7 @@ public class Ride {
 
 	@Column(name = "RDS_TOTAL_DISTANCE")
 	private Long totalDistance;
-	
+
 	@Basic(optional = false)
 	@Column(name = "DC_CREATED_DATE", insertable = true, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -61,11 +61,11 @@ public class Ride {
 
 	@Column(name = "RDS_FARE")
 	private String fare;
-	
+
 	@Column(name = "RDS_START_LAT_LONG")
 	@Type(type = "org.hibernate.spatial.GeometryType")
 	private Point startLatitudeLongitude;
-	
+
 	@Column(name = "RDS_END_LAT_LONG")
 	@Type(type = "org.hibernate.spatial.GeometryType")
 	private Point endLatitudeLongitude;
@@ -74,19 +74,18 @@ public class Ride {
 	@Column(name = "RDS_START_TIME", insertable = true, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date startTimestamp;
-	
+
 	@Basic(optional = false)
 	@Column(name = "RDS_END_TIME", insertable = true, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date endTimestamp;
-	
+
 	@Column(name = "RDS_DELETED")
-	@ColumnDefault("false") 
+	@ColumnDefault("false")
 	private Boolean deleted;
-	
+
 	public Ride() {
 
 	}
-                               
 
 }
